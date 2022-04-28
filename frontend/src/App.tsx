@@ -10,6 +10,9 @@ import {
 } from '@solana/wallet-adapter-wallets';
 import { clusterApiUrl } from '@solana/web3.js';
 import React, { FC, ReactNode, useMemo } from 'react';
+import DataContainer from './components/DataContainer';
+import ActionButton from './components/ActionButton'
+import Data from './components/Data'
 
 require('./App.css');
 require('@solana/wallet-adapter-react-ui/styles.css');
@@ -50,13 +53,17 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
                 <WalletModalProvider>{children}</WalletModalProvider>
             </WalletProvider>
         </ConnectionProvider>
+
     );
 };
 
 const Content: FC = () => {
     return (
         <div className="App">
+            <div className="container">
             <WalletMultiButton />
+            <DataContainer></DataContainer>
+            </div>
         </div>
     );
 };
