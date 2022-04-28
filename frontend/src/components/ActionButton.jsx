@@ -13,8 +13,7 @@ const ActionButton = ({set}) => {
         await new Promise(resolve => setTimeout(resolve, 1000));
         let result = await fetchData()
         setIsFetching(false)
-        set([{'name': 'NFT1', 'benefits': ['Subway $5 off', 'McDonalds free cone'] }])
-        return result
+        set(result)
     }
 
     return (
