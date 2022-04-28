@@ -32,7 +32,7 @@ const DataContainer = () => {
 
     return (
         <div>
-            <h1 className="white">Data</h1>
+            <h1 className="white">Benefits</h1>
 
             <div className="data-container">
             <ActionButton set={setData} ></ActionButton>

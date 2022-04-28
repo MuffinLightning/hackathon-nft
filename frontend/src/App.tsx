@@ -9,11 +9,12 @@ import {
     TorusWalletAdapter,
 } from '@solana/wallet-adapter-wallets';
 import { clusterApiUrl } from '@solana/web3.js';
-import React, { FC, ReactNode, useMemo } from 'react';
+import React, { FC, ReactNode, useMemo, useState, useEffect } from 'react';
 import DataContainer from './components/DataContainer';
-import ActionButton from './components/ActionButton'
-import Data from './components/Data'
-
+import logo from './assets/none.png'
+import {
+    useWallet
+} from '@solana/wallet-adapter-react';
 require('./App.css');
 require('@solana/wallet-adapter-react-ui/styles.css');
 
@@ -57,10 +58,32 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
     );
 };
 
+
 const Content: FC = () => {
+    const { publicKey } = useWallet();
+    const [pk, setPk] = useState<any>()
+
+    useEffect(() => {
+        setPk(publicKey)
+      }, [publicKey]); // Only re-run the effect if count changes
+
+    if (!pk) {
+        return (
+            <div className="App">
+                <div className="container">
+                <h1 className="white">Points NFT Service</h1>
+                <WalletMultiButton />
+                <img src={logo} alt="Logo" />
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="App">
             <div className="container">
+            <h1 className="white">Points NFT Service</h1>
+
             <WalletMultiButton />
             <DataContainer></DataContainer>
             </div>
