@@ -10,34 +10,12 @@ app.UseCors(builder =>
     .AllowAnyHeader();
 });
 
-app.MapGet("/benefits/{walletId}/{storeId?}", (string walletId, string? storeId) =>
+app.MapGet("/benefits/{walletId}/{storeId?}", async (string walletId, string? storeId) =>
     {
-        var result = new List<Response>{
-            new Response{
-                Name = "NFT1",
-                Benefits = new List<string>{
-                    "Subway $5 off",
-                    "McDonalds free cone"
-                }
-            },
-            new Response{
-                Name = "NFT2",
-                Benefits = new List<string>{
-                    "Lyft 10%",
-                    "Hilton 20%"
-                }
-            }
-        };
+        var tokens = await Wallet.GetTokens(walletId);
         
-        return result;
+        return tokens?.Select(t=> Data.GetBenefitsByTokenAddress(t.TokenAddress!));
     }
 );
 
 app.Run();
-
-
-public class Response{
-    public string Name { get; set; } = string.Empty;
-
-    public List<string>? Benefits { get; set; }
-}
