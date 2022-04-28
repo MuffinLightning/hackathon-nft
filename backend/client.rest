@@ -1,1 +1,16 @@
 http://localhost:8081/benefits/123
+
+
+# Key Id: cxeoaOCA53r00vJ
+# Secret Key: UuM0IzsmQyoLShr
+
+###
+GET https://api.theblockchainapi.com/v1/solana/nft
+APISecretKey: UuM0IzsmQyoLShr
+APIKeyId: cxeoaOCA53r00vJ
+
+{
+    "mint_address": "Bov9mSM32MFfWBNmpBEoAbKZ3Q7npqZZjjgYJjXNMNve",
+    "network": "devnet"
+}
+

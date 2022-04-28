@@ -1,2 +1,2 @@
 docker build . -t nft-backend
-docker run -d --rm nft-backend -p 8081:80
+docker run -it --rm  -p 8081:80 nft-backend
