@@ -4,3 +4,25 @@
   justify-content: center;
   align-items: center;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.white {
+  color: white
+}
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.nft-name {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
