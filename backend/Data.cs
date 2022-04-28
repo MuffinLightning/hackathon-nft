@@ -1,7 +1,11 @@
 public static class Data {
     private static Dictionary<string, Response> _tokenBenefits = new Dictionary<string, Response>{
-        {"Bov9mSM32MFfWBNmpBEoAbKZ3Q7npqZZjjgYJjXNMNve", new Response{Name = "Subway", Benefits = new List<string> {"10% off subway"} }},
-        {"9351jpcXuxisJguig1vDTR12MAUTkXS7LNDb7mwmWTA7", new Response{Name = "Lyft", Benefits = new List<string> {"15% off your Lyft rides"} }}
+        {"EAS1kfpgmLRo5WAZdJgpCzZtY6ak44pVsT3DxoeeQWfx", 
+            new Response{Name = "Hilton Gold", Benefits = new List<string> {"Fifth night free", "Free bottled water" } }},
+        {"3DtohyN3EQyBkie4zuyyprmCFZLDrvpohs1xxqyyh8GF", 
+            new Response{Name = "Hilton Diamond", Benefits = new List<string> {"Premium WiFi", "Space-available room upgrades"} }},
+        {"G5VzDcc7PoNMzz4oubCC2tppSPphjkmDeZXJFPv3vEWb", 
+            new Response{Name = "Lyft", Benefits = new List<string> {"5% discount"} }}
     };
 
     public static Response GetBenefitsByTokenAddress(string tokenAddress){
