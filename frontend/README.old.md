@@ -1,3 +1,0 @@
-# NFT Frontend
-
-Frontend
