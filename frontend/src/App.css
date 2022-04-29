@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Nunito', sans-serif;
 }
 
 .container {
@@ -26,3 +27,15 @@
   font-size: 2rem;
 }
 
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 176px;
+  row-gap: 30px;
+}
+
+.grid-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

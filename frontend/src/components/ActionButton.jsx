@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import {
     useWallet
 } from '@solana/wallet-adapter-react';
-
+import { Grid } from 'react-loader-spinner'
 
 
 const ActionButton = ({set}) => {
@@ -22,7 +22,10 @@ const ActionButton = ({set}) => {
     }
 
     return (
+        <div className="loader-container">
         <button className ="wallet-adapter-button wallet-adapter-button-trigger refresh" disabled={isFetching} onClick={() => getData()}>{isFetching ? 'LOADING...' : 'Refresh Data'}</button>
+        {isFetching ? <span className="grid-loader"><Grid color="#00BFFF" height={60} width={80} /></span>: ''}
+        </div>
     )
 }
 
