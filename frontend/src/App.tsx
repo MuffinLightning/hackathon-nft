@@ -71,7 +71,7 @@ const Content: FC = () => {
             <FadeIn>
             <div className="App">
                 <div className="container">
-                <h1 className="white">Points NFT Service</h1>
+                <h1 className="white title">Points NFT Service</h1>
                 <WalletModalButton></WalletModalButton>
                 {/* <WalletMultiButton /> */}
                 {/* <img src={logo} alt="Logo" /> */}
@@ -85,7 +85,7 @@ const Content: FC = () => {
         <FadeIn transitionDuration={600}>
         <div className="App">
             <div className="container">
-            <h1 className="white">Points NFT Service</h1>
+            <h1 className="white title">Points NFT Service</h1>
 
             <WalletMultiButton />
             <DataContainer></DataContainer>
