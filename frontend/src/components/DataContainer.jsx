@@ -22,7 +22,7 @@ const DataContainer = () => {
                 <br></br>
                 <div className="nft-name">{x.name}</div>
                 <br></br>
-                <div>{b}</div>
+                <div className="benefit-text">{b}</div>
                 </FadeIn>
                 </>
             )
